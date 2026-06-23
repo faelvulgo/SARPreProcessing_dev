@@ -8,12 +8,12 @@ import sys
 # CONFIGURAÇÕES
 # =========================
 
-GPT_PATH = r"D:\esa-snap\bin\gpt.exe"
+GPT_PATH = r"PATH"
 
-WORKFLOW = r"D:\Mestrado\preproc.xml"
+WORKFLOW = r"PATH"
 
-INPUT_DIR = Path(r"D:\Mestrado\ImagensSAR\2026")
-OUTPUT_DIR = Path(r"D:\Mestrado\ImagensSAR\2026Proc")
+INPUT_DIR = Path(r"PATH")
+OUTPUT_DIR = Path(r"PATH")
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 
