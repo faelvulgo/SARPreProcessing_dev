@@ -4,9 +4,11 @@ from datetime import datetime
 from tqdm import tqdm
 import sys
 
-# =========================
-# CONFIGURAÇÕES
-# =========================
+"""
+Configurations: 
+Set the GPT.exe path of ESA Snap and the worflow .XML path
+Set the images directory and the output directory
+"""
 
 GPT_PATH = r"PATH"
 
@@ -17,10 +19,7 @@ OUTPUT_DIR = Path(r"PATH")
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-# =========================
-# LISTA DE IMAGENS
-# =========================
-
+# Image lists
 arquivos = sorted(INPUT_DIR.glob("*.zip"))
 
 if len(arquivos) == 0:
@@ -29,10 +28,10 @@ if len(arquivos) == 0:
 
 print(f"\nEncontradas {len(arquivos)} imagens\n")
 
-# =========================
-# PROCESSAMENTO
-# =========================
-
+"""
+Processing:
+Execute the processing workflow using the ESA Snap GPT and tell the time it took.
+"""
 falhas = []
 
 for arquivo in tqdm(arquivos, desc="Processando imagens"):
@@ -102,10 +101,7 @@ for arquivo in tqdm(arquivos, desc="Processando imagens"):
             f.write(str(e))
             f.write("\n")
 
-# =========================
-# RESUMO
-# =========================
-
+# Summary
 print("\n")
 print("="*50)
 
